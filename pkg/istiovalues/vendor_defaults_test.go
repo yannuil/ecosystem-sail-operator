@@ -32,12 +32,12 @@ func TestApplyVendorDefaults(t *testing.T) {
 	}{
 		{
 			vendorDefaults: `
-v1.24.2:
+v1.24.6:
   pilot:
     env:
       someEnvVar: "true"
 `,
-			version:   "v1.24.2",
+			version:   "v1.24.6",
 			preValues: &v1.Values{},
 			postValues: &v1.Values{
 				Pilot: &v1.PilotConfig{

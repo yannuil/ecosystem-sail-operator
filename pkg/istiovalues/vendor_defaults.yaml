@@ -2,7 +2,7 @@
 # vendor-specific defaults. You can configure version-specific defaults for
 # every field in `spec.values`, see the following example:
 # 
-# v1.24.2:
+# v1.24.6:
 #   pilot:
 #     env:
 #       test: "true"
