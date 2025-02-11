@@ -9434,10 +9434,6 @@ spec:
                 - v1.22.5
                 - v1.21.6
                 - v1.25-alpha.24741de0
-                - master
-                - v1.24-latest
-                - v1.23-latest
-                - v1.22-latest
                 type: string
             required:
             - namespace
