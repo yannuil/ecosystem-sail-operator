@@ -19,7 +19,7 @@ OLD_VARS := $(.VARIABLES)
 # Use `make print-variables` to inspect the values of the variables
 -include Makefile.vendor.mk
 
-VERSION ?= 1.26.1
+VERSION ?= 3.1.0
 MINOR_VERSION := $(shell echo "${VERSION}" | cut -f1,2 -d'.')
 
 # This version will be used to generate the OLM upgrade graph in the FBC as a version to be replaced by the new operator version defined in $VERSION.
@@ -30,7 +30,7 @@ MINOR_VERSION := $(shell echo "${VERSION}" | cut -f1,2 -d'.')
 # There are also GH workflows defined to release nightly and stable operators.
 # There is no need to define `replaces` and `skipRange` fields in the CSV as those fields are defined in the FBC and CSV values are ignored.
 # FBC is source of truth for OLM upgrade graph.
-PREVIOUS_VERSION ?= 1.26.0
+PREVIOUS_VERSION ?= 3.1.0
 
 OPERATOR_NAME ?= sailoperator
 VERSIONS_YAML_DIR ?= pkg/istioversion
@@ -512,7 +512,7 @@ operator-chart:
 
 .PHONY: update-istio
 update-istio: ## Update the Istio commit hash in the 'latest' entry in versions.yaml to the latest commit in the branch.
-	@hack/update-istio.sh
+	@echo 'Not running "hack/update-istio.sh" in the downstream release'
 
 .PHONY: print-variables
 print-variables: ## Print all Makefile variables; Useful to inspect overrides of variables.
